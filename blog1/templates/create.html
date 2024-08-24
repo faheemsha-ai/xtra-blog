@@ -1,0 +1,22 @@
+{% extends 'theme.html' %}
+{% load static%}
+{% block content %}
+<main class="tm-main">
+<form action="#" class="form" method="post" style="align-items: right;" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2 class="tm-color-primary tm-post-title mb-4">MAKE YOUR POST</h2>
+    <div class="mb-4">
+        {{form.item}}
+    </div>
+    <div class="mb-4">
+        {{form.image}}
+    </div>
+    <div class="mb-4">
+        {{form.content}}
+    </div>
+    <div class="text-right">
+        <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+    </div>                                
+</form>
+</main>
+{% endblock %}

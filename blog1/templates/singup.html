@@ -1,0 +1,11 @@
+{% extends 'theme.html' %}
+{% load static%}
+{% block content %}
+<main class="tm-main">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-success">Signup</button>
+    </form>   
+</main>
+{% endblock %}
